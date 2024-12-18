@@ -17,3 +17,6 @@ run:
 		-it \
 		-p 8000:8000 \
 		--rm --name $(CONTAINER_NAME) $(REGISTRY)/$(IMAGE_NAME):$(VERSION)
+
+push:
+	docker push $(REGISTRY)/$(IMAGE_NAME):$(VERSION)
